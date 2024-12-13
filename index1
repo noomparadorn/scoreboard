@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        .scoreboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            background-color: #5C2470;
+            padding: 20px;
+            border: 5px solid white;
+            border-radius: 10px;
+            color: white;
+            font-family: Arial, sans-serif;
+            width: 600px;
+        }
+
+        .scoreboard div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .time {
+            grid-column: 1 / span 3;
+            font-size: 3em;
+        }
+
+        .home, .guests {
+            font-size: 4em;
+        }
+
+        .period {
+            font-size: 3em;
+        }
+
+        .label {
+            font-size: 1.5em;
+        }
+
+        .label-home, .label-guests {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="scoreboard">
+        <!-- Time Display -->
+        <div class="time">
+            <span>08:48</span>
+        </div>
+
+        <!-- Home Score -->
+        <div class="home">
+            <span>04</span>
+        </div>
+
+        <!-- Period -->
+        <div class="period">
+            <span>2</span>
+        </div>
+
+        <!-- Guest Score -->
+        <div class="guests">
+            <span>08</span>
+        </div>
+
+        <!-- Labels -->
+        <div class="label label-home">HOME</div>
+        <div></div>
+        <div class="label label-guests">GUESTS</div>
+    </div>
+</body>
+</html>

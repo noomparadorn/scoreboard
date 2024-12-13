@@ -16,8 +16,8 @@
 
         .scoreboard {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
             gap: 10px;
             background-color: #5C2470;
             padding: 20px;
@@ -25,38 +25,67 @@
             border-radius: 10px;
             color: white;
             font-family: Arial, sans-serif;
-            width: 600px;
-        }
-
-        .scoreboard div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            border: 2px solid white;
-            padding: 10px;
-            border-radius: 5px;
+            width: 700px;
+            text-align: center;
         }
 
         .time {
-            grid-column: 1 / span 3;
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
             font-size: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .time div {
+            display: inline-block;
+            margin: 0 5px;
         }
 
         .home, .guests {
             font-size: 4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+        }
+
+        .guests {
+            grid-column: 3 / span 1;
+            grid-row: 2 / span 1;
         }
 
         .period {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
             font-size: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .label {
             font-size: 1.5em;
         }
 
-        .label-home, .label-guests {
-            text-align: center;
+        .label-home {
+            grid-column: 1 / span 1;
+            grid-row: 3 / span 1;
+        }
+
+        .label-period {
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 1;
+        }
+
+        .label-guests {
+            grid-column: 3 / span 1;
+            grid-row: 3 / span 1;
         }
     </style>
 </head>
@@ -64,28 +93,25 @@
     <div class="scoreboard">
         <!-- Time Display -->
         <div class="time">
-            <span>08:48</span>
+            <div>08</div>
+            <div>:</div>
+            <div>48</div>
         </div>
 
         <!-- Home Score -->
-        <div class="home">
-            <span>04</span>
-        </div>
+        <div class="home">04</div>
 
         <!-- Period -->
-        <div class="period">
-            <span>2</span>
-        </div>
+        <div class="period">2</div>
 
         <!-- Guest Score -->
-        <div class="guests">
-            <span>08</span>
-        </div>
+        <div class="guests">08</div>
 
         <!-- Labels -->
         <div class="label label-home">HOME</div>
-        <div></div>
+        <div class="label label-period">PERIOD</div>
         <div class="label label-guests">GUESTS</div>
     </div>
 </body>
 </html>
+
